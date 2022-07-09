@@ -14,6 +14,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     {
+      resolve: `@imgix/gatsby`,
+      options: {
+        domain: 'images.microcms-assets.io',
+        defaultImgixParams: { auto: ['format', 'compress'] },
+      },
+    },
+    {
       resolve: 'gatsby-source-microcms',
       options: {
         apiKey: process.env.API_KEY,

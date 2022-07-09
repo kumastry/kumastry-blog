@@ -12,6 +12,7 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-source-microcms',
       options: {

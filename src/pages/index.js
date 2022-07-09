@@ -49,7 +49,13 @@ const IndexPage = ({imagequery}) => {
             console.log(blog.node.eyecatch.url);
             console.log("###")
             return(
+
+              <Link to = {`/blog/${blog.node.blogsId}`}>
+        
+             
+
               <div className="block">
+              
               <li>
                 <div className="card" style={{margin: "3rem 5rem"}}>
 
@@ -72,6 +78,8 @@ const IndexPage = ({imagequery}) => {
           
               </li>
               </div>
+
+              </Link>
             );
           })}
         </ul>

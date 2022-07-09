@@ -4,6 +4,7 @@ import {StaticImage ,GatsbyImage} from 'gatsby-plugin-image'
 import "./mystyles.scss";
 import Header from "../components/header";
 import Layout from "../components/layout";
+import { ImgixGatsbyImage } from '@imgix/gatsby';
 
 export const query = graphql`
 query {
@@ -25,9 +26,12 @@ query {
 }
 `
 
-const IndexPage = () => {
+const IndexPage = ({imagequery}) => {
   const blogs = useStaticQuery(query).allMicrocmsBlogs.edges;
   console.log(blogs);
+  
+
+
   return (
     
     <Layout>
@@ -38,6 +42,9 @@ const IndexPage = () => {
               <p>{blog.node.title}</p>
             );*/
 
+
+
+        
             console.log("###")
             console.log(blog.node.eyecatch.url);
             console.log("###")
@@ -47,7 +54,13 @@ const IndexPage = () => {
                 <div className="card" style={{margin: "3rem 5rem"}}>
 
                   <div class="card-image">
-                      <GatsbyImage img = {blog.node.eyecatch.url} alt = "noa"/>
+                      <ImgixGatsbyImage 
+                      src= {blog.node.eyecatch.url}
+                      layout = "fullWidth"
+                      width= {blog.node.eyecatch.width}
+                      height = {blog.node.eyecatch.height} 
+                      alt = "ブログの画像"
+                      />
                   </div>
 
 

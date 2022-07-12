@@ -26,7 +26,7 @@ query {
 }
 `
 
-const IndexPage = ({imagequery}) => {
+const IndexPage = () => {
   const blogs = useStaticQuery(query).allMicrocmsBlogs.edges;
   console.log(blogs);
   
@@ -36,7 +36,7 @@ const IndexPage = ({imagequery}) => {
     
     <Layout>
       <main>
-        <ul>
+        <ul style={{display : 'flex', flexWrap : "wrap", }}>
           {blogs.map((blog) => {
             /*return(
               <p>{blog.node.title}</p>
@@ -50,14 +50,14 @@ const IndexPage = ({imagequery}) => {
             console.log("###")
             return(
 
-              <Link to = {`/blog/${blog.node.blogsId}`}>
+             
         
              
 
-              <div className="block">
+              <article style={{margin: "1rem",  flex: '1'}}>
               
               <li>
-                <div className="card" style={{margin: "3rem 5rem"}}>
+                <div className="card is-flex-wrap-wrap">
 
                   <div class="card-image">
                       <ImgixGatsbyImage 
@@ -77,9 +77,9 @@ const IndexPage = ({imagequery}) => {
                 </div>
           
               </li>
-              </div>
+              </article>
 
-              </Link>
+             
             );
           })}
         </ul>

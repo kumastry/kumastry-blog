@@ -28,7 +28,7 @@ query {
 
 const IndexPage = () => {
   const blogs = useStaticQuery(query).allMicrocmsBlogs.edges;
-  console.log(blogs);
+  //console.log(blogs);
   
 
 
@@ -36,8 +36,8 @@ const IndexPage = () => {
     
     <Layout>
       <main>
-        <ul >
-          {blogs.map((blog) => {
+        <ul>
+          {blogs.map((blog, key) => {
             /*return(
               <p>{blog.node.title}</p>
             );*/
@@ -50,18 +50,12 @@ const IndexPage = () => {
             //console.log("###")
             return(
 
-             
-        
-             
-
-             
-              
               <li style={{margin: "1rem auto",  width:'60%'}}>
 
                 <Link to = {`blog/${blog.node.blogsId}`}>
                 <article className="card">
 
-                  <div class="card-image">
+                  <div className="card-image">
                       <ImgixGatsbyImage 
                       src= {blog.node.eyecatch.url}
                       layout = "fullWidth"

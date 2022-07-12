@@ -6,7 +6,7 @@ export default function Layout({children}) {
   return (
     <div >
         <Header />
-            <main>
+            <main style={{margin:'1rem'}}>
                 {children}
             </main>
         <Footer/>

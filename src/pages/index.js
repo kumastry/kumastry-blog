@@ -58,6 +58,7 @@ const IndexPage = () => {
               
               <li style={{margin: "1rem auto",  width:'60%'}}>
 
+                <Link to = {`blog/${blog.node.blogsId}`}>
                 <article className="card">
 
                   <div class="card-image">
@@ -77,6 +78,7 @@ const IndexPage = () => {
 
      
                 </article>
+                </Link>
               </li>
            
 

@@ -36,7 +36,7 @@ const IndexPage = () => {
     
     <Layout>
       <main>
-        <ul style={{display : 'flex', flexWrap : "wrap", }}>
+        <ul >
           {blogs.map((blog) => {
             /*return(
               <p>{blog.node.title}</p>
@@ -54,10 +54,11 @@ const IndexPage = () => {
         
              
 
-              <article style={{margin: "1rem",  flex: '1'}}>
+             
               
-              <li>
-                <div className="card is-flex-wrap-wrap">
+              <li style={{margin: "1rem auto",  width:'60%'}}>
+
+                <article className="card">
 
                   <div class="card-image">
                       <ImgixGatsbyImage 
@@ -74,10 +75,10 @@ const IndexPage = () => {
                     {blog.node.title}
                   </div>
 
-                </div>
-          
+     
+                </article>
               </li>
-              </article>
+           
 
              
             );

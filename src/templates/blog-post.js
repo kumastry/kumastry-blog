@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import parse from 'html-react-parser';
+import "../pages/mystyles.scss";
 
 const BlogPost = ({pageContext}) => {
 

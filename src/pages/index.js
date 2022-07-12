@@ -45,9 +45,9 @@ const IndexPage = () => {
 
 
         
-            console.log("###")
-            console.log(blog.node.eyecatch.url);
-            console.log("###")
+            //console.log("###")
+            //console.log(blog.node.eyecatch.url);
+            //console.log("###")
             return(
 
              
